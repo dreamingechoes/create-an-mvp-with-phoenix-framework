@@ -11,7 +11,7 @@ defmodule Nevernote.Application do
       # Start the Ecto repository
       supervisor(Nevernote.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(NevernoteWeb.Endpoint, []),
+      supervisor(NevernoteWeb.Endpoint, [])
       # Start your own worker by calling: Nevernote.Worker.start_link(arg1, arg2, arg3)
       # worker(Nevernote.Worker, [arg1, arg2, arg3]),
     ]

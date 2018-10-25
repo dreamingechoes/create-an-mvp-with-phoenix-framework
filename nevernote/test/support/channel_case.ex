@@ -25,13 +25,13 @@ defmodule NevernoteWeb.ChannelCase do
     end
   end
 
-
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nevernote.Repo)
+
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(Nevernote.Repo, {:shared, self()})
     end
+
     :ok
   end
-
 end

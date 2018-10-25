@@ -1,0 +1,40 @@
+<h2><%= gettext("Show blocknote") %></h2>
+
+<div class="card">
+  <div class="card-body pb-0">
+    <h5 class="card-title"> <%= @blocknote.title %></h5>
+
+    <hr class="my-4">
+
+    <div class="row">
+      <%= if Kernel.length(@blocknote.notes) > 0 do %>
+        <%= for note <- @blocknote.notes do %>
+          <div class="col-sm-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title"><%= note.title %></h5>
+                <p class="card-text"><%= note.description %></p>
+
+                <%= link gettext("Edit note"), to: note_path(@conn, :edit, note), class: "card-link" %>
+                <%= link gettext("Delete note"), to: note_path(@conn, :delete, note),
+                    method: :delete, data: [confirm: gettext("Are you sure?")], class: "card-link" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="col-sm-12">
+          <p><strong><%= gettext("There isn't any note in this blocknote yet.") %></strong></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <%= link gettext("Edit"), to: blocknote_path(@conn, :edit, @blocknote), class: "btn btn-primary" %>
+    <%= link gettext("Back"), to: blocknote_path(@conn, :index), class: "btn btn-light" %>
+
+    <%= link gettext("Create note"), to: note_path(@conn, :new, blocknote_id: @blocknote.id),
+        class: "btn btn-success pull-right" %>
+  </div>
+</div>

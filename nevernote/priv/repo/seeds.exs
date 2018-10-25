@@ -1,11 +1,24 @@
-# Script for populating the database. You can run it as:
-#
-#     mix run priv/repo/seeds.exs
-#
-# Inside the script, you can read and write to any of your
-# repositories directly:
-#
-#     Nevernote.Repo.insert!(%Nevernote.SomeSchema{})
-#
-# We recommend using the bang functions (`insert!`, `update!`
-# and so on) as they will fail if something goes wrong.
+alias Nevernote.Accounts
+alias Nevernote.Content
+
+# Create an example user
+{:ok, user} =
+  Accounts.create_user(%{
+    email: "example@nevernote.com",
+    username: "Example",
+    password: "123456"
+  })
+
+# Create a blocknote
+{:ok, blocknote} =
+  Content.create_blocknote(%{title: "Example Blocknote", user_id: user.id})
+
+# Create some notes
+Enum.each([1, 2, 3], fn index ->
+  Content.create_note(%{
+    title: "Note Number #{index}",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus sodales pharetra. Maecenas nibh tellus, tincidunt nec blandit a, tincidunt vitae tortor.",
+    blocknote_id: blocknote.id
+  })
+end)

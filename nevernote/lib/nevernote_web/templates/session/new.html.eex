@@ -1,0 +1,9 @@
+<%= form_for @conn, session_path(@conn, :create), [as: :session, class: "form-signin text-center"], fn f -> %>
+  <%= img_tag static_path(@conn, "/images/nevernote.png"), class: "d-inline-block align-top mb-4",
+      height: "200px", title: gettext("Nevernote") %>
+  <h2 class="form-signin-heading mb-4"><%= gettext("Please log in") %></h2>
+
+  <%= email_input f, :email, placeholder: gettext("Email"), class: "form-control", required: true %>
+  <%= password_input f, :password, placeholder: gettext("Password"), class: "form-control", required: true %>
+  <%= submit "Log in", class: "btn btn-lg btn-primary btn-block mt-4" %>
+<% end %>

@@ -1,0 +1,3 @@
+<h2><%= gettext("New blocknote") %></h2>
+
+<%= render "form.html", Map.put(assigns, :action, blocknote_path(@conn, :create)) %>

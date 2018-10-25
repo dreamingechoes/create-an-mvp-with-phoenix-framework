@@ -1,0 +1,13 @@
+version: '2'
+services:
+  db:
+    image: postgres:11.0
+  web:
+    build: .
+    command: mix phx.server
+    volumes:
+      - .:/nevernote
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db

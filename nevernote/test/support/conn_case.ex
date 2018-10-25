@@ -23,16 +23,30 @@ defmodule NevernoteWeb.ConnCase do
 
       # The default endpoint for testing
       @endpoint NevernoteWeb.Endpoint
+
+      def log_in(user),
+        do: log_in(Phoenix.ConnTest.build_conn(), user)
+
+      def log_in(conn, user) do
+        Nevernote.Guardian.Plug.sign_in(conn, user)
+      end
     end
   end
-
 
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nevernote.Repo)
+
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(Nevernote.Repo, {:shared, self()})
     end
-    {:ok, conn: Phoenix.ConnTest.build_conn()}
-  end
 
+    {:ok, user} =
+      Nevernote.Accounts.create_user(%{
+        email: "example@nevernote.com",
+        username: "Example",
+        password: "123456"
+      })
+
+    {:ok, conn: Phoenix.ConnTest.build_conn(), user: user}
+  end
 end
