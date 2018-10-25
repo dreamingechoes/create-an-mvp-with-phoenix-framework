@@ -1,8 +1,8 @@
 defmodule NevernoteWeb.SessionController do
+  use NevernoteWeb, :controller
+
   alias Nevernote.Guardian
   alias Nevernote.Guardian.Plug
-
-  use NevernoteWeb, :controller
 
   def new(conn, _), do: render(conn, "new.html")
 

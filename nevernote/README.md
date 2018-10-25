@@ -6,6 +6,25 @@
 
 Application to create blocknotes with your ideas. A revolutionary application never done before :joy:
 
+![Nevernote](./assets/static/images/app.png)
+
+## Setup
+
+To start to use this application, install the following dependencies natively or with [asdf](https://github.com/asdf-vm/asdf):
+
+* [Erlang](http://erlang.org/doc/installation_guide/INSTALL.html)
+* [Elixir](https://elixir-lang.org/install.html)
+* [Phoenix](https://hexdocs.pm/phoenix/installation.html)
+* [Node.js](https://nodejs.org/en/download/)
+* [PostgreSQL](https://www.postgresql.org/docs/9.3/static/tutorial-install.html)
+
+This application uses `Elixir v1.7.3` and `Phoenix Framework v1.3.4`. Once all is installed, just execute these instructions:
+
+* Install dependencies with `mix deps.get`.
+* Create your database with `mix ecto.setup`.
+* Install Node.js dependencies with `cd assets && npm install`.
+* Start the application with `mix phx.server`.
+
 ## Setup development environment with Docker
 
 This project is Docker friendly from day one. To start working on it:

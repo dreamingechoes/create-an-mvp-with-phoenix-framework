@@ -1,6 +1,6 @@
 defmodule NevernoteWeb.Guardian.AuthPipeline do
   use Guardian.Plug.Pipeline,
-    otp_app: :phoenix_example_app,
+    otp_app: :nevernote,
     module: Nevernote.Guardian,
     error_handler: Nevernote.Guardian.AuthErrorHandler
 

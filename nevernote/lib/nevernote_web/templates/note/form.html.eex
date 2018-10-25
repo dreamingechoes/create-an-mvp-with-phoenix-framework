@@ -11,7 +11,7 @@
 
       <div class="form-group">
         <%= label f, :title, class: "control-label" %>
-        <%= text_input f, :title, class: "form-control" %>
+        <%= text_input f, :title, class: "form-control", required: true %>
         <%= error_tag f, :title %>
       </div>
 

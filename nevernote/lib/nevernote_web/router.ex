@@ -34,11 +34,7 @@ defmodule NevernoteWeb.Router do
 
     # Application authenticated scope
     scope "/" do
-      pipe_through([
-        :browser,
-        :browser_auth,
-        :browser_ensure_auth
-      ])
+      pipe_through([:browser, :browser_auth, :browser_ensure_auth])
 
       resources("/blocknotes", BlocknoteController)
       resources("/notes", NoteController, except: [:index, :show])
