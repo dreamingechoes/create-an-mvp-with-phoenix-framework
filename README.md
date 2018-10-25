@@ -6,6 +6,10 @@
 
 ## About
 
+This repository is the base for a workshop about how to create an [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) with [Elixir](https://elixir-lang.org/) and [Phoenix Framework](https://phoenixframework.org/). In this workshop, we're going to tackle the development of a product idea, setting our development environment, seeing the structure of a regular [Phoenix](https://phoenixframework.org/) application, modeling the business logic, building the web and shipping the final result to production.
+
+So... let's go!!!
+
 ## Contents
 
 - [The Idea](#the-idea)
@@ -20,7 +24,7 @@
   - [Lib](#lib)
   - [Priv](#priv)
   - [Test](#test)
-- [Modeling The Logic](#modeling-the-logic)
+- [Modeling The Business Logic](#modeling-the-business-logic)
   - [Contexts](#contexts)
   - [Schemas](#schemas)
   - [Context Organization](#context-organization)
@@ -38,6 +42,8 @@
   - [Books](#books)
 
 ## The Idea
+
+
 
 <p align="center"><img src="./files/images/schemas.png"></p>
 
@@ -63,7 +69,7 @@
 
 ### Test
 
-## Modeling The Logic
+## Modeling The Business Logic
 
 ### Contexts
 
