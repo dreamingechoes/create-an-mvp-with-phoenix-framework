@@ -1,9 +1,5 @@
 # Nevenote
 
-![Nevernote](./assets/static/images/nevernote.png)
-
-## About
-
 Application to create blocknotes with your ideas. A revolutionary application never done before :joy:
 
 ![Nevernote](./assets/static/images/app.png)
