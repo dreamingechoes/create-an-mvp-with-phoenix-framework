@@ -1,8 +1,6 @@
-
 # Create An MVP With Phoenix Framework
 
 <p align="center"><img src="./files/images/logo.png"></p>
-
 
 ## About
 
@@ -43,33 +41,117 @@ So... let's go!!!
 
 ## The Idea
 
+The product we want to create will be a simple application which with we can sync all our notes in the cloud. For the **MVP**, we just need to store the **user’s information**, a series of **blocknotes** created by the user, and the **notes** which belongs to the **blocknotes**.
 
+**Always start with something simple**, and growth on and on.
 
 <p align="center"><img src="./files/images/schemas.png"></p>
 
 ## Environment Setup
 
+We’ll need to install the following dependencies:
+
+Erlang
+
+Elixir
+
+Phoenix Framework
+
+Node.js
+
+PostgreSQL
+
 ### Natively
+
+Erlang: erlang.org/doc/installation_guide/INSTALL.html
+
+Elixir: elixir-lang.org/install.html
+
+Phoenix Framework: hexdocs.pm/phoenix/installation.html
+
+Node.js: nodejs.org/en/download/package-manager
+
+PostgreSQL: postgresql.org/docs/current/static/tutorial-install.html
 
 ### Version Manager
 
+asdf: Extendable version manager with support for Ruby, Node.js, Elixir Erlang & more.
+
+github.com/asdf-vm/asdf
+
 ### Docker
+
+We can recreate the setup of our servers to work in development in the same conditions.
+
+Key files: Dockerfile and docker-compose.yml
+
+docs.docker.com/install
+
+github.com/dreamingechoes/docker-elixir-phoenix
 
 ## Phoenix Application Structure
 
 ### Config Files
 
+We have a series of files in the root of the application:
+
+mix.exs: main application configuration.
+
+.formatter.exs: configuration for the mix format task.
+
+.credo.exs: configuration for Credo.
+
 ### Assets
+
+Folder with all the stuff related with the application’s assets:
+
+Brunch config (brunch is used by default by Phoenix)
+
+CSS
+
+Javascript
+
+Static files
 
 ### Application Config
 
+Folder with all the definitions of the main application configuration, as well as the different environments:
+
+config.exs
+
+dev.exs
+
+prod.exs
+
+test.exs
+
 ### Lib
+
+Contains the core of the application, both business logic and web implementation.
 
 ### Priv
 
+Contains internationalization and database files:
+
+gettext folder: internationalization files.
+
+repo folder: migrations and database seeds.
+
 ### Test
 
+All about application tests, both unit and integration.
+
 ## Modeling The Business Logic
+
+Inside the LIB folder, we have a place in which we can define all the business logic of our application.
+
+Contexts: hexdocs.pm/phoenix/contexts.html
+
+Schemas: hexdocs.pm/ecto/Ecto.Schema.html
+
+application.ex: hexdocs.pm/elixir/Application.html
+
+repo.ex
 
 ### Contexts
 
@@ -78,6 +160,16 @@ So... let's go!!!
 ### Context Organization
 
 ## Building The Web
+
+Inside the LIB folder, we have a place in which we can develop the final web which with will interact the final user.
+
+Controllers: hexdocs.pm/phoenix/controllers.html
+
+Templates: hexdocs.pm/phoenix/templates.html
+
+Views: hexdocs.pm/phoenix/views.html
+
+router.ex: hexdocs.pm/phoenix/Phoenix.Router.html
 
 ### Router
 
@@ -89,9 +181,28 @@ So... let's go!!!
 
 ### Distillery
 
+Simplify deployments in Elixir. This is useful if we have a server and we want to deploy our application in there.
+
+Distillery will compile the application with the specified configuration, generate the binaries and push it to our server.
+
+github.com/bitwalker/distillery
+
 ### Heroku
 
+Heroku provides great integration with Phoenix applications, with buildpacks specifically designed for Elixir projects.
+
+It’s the best method to start a MVP. Free server, free database storage, zero server configuration.
+
+heroku.com
+
+
 ### Other Alternatives
+
+Amazon AWS: aws.amazon.com
+
+Google Cloud: cloud.google.com
+
+Gigalixir: gigalixir.com
 
 ## Final Product
 
