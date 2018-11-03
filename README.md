@@ -41,10 +41,7 @@ So... let's go!!!
 
 ## The Idea
 
-The product we want to create will be a simple application which with we can sync all our notes in the cloud. For the **MVP**, we just need to store the **user’s information**, a series of **blocknotes** created by the user, and the **notes** which belongs to the **blocknotes**.
-
-
-The models diagram will look pretty simple, something like this:
+The product we want to create will be a simple application which with we can sync all our notes in the cloud. For the **MVP**, we just need to store the **user’s information**, a series of **blocknotes** created by the user, and the **notes** which belongs to the **blocknotes**. The models diagram will look pretty simple, something like this:
 
 <p align="center"><img src="./files/images/schemas.png"></p>
 
@@ -52,17 +49,19 @@ So once we have defined the product we're going to develop, and with the data mo
 
 ## Environment Setup
 
-We’ll need to install the following dependencies:
+We'll need to install the following dependencies:
 
-[Erlang](https://www.erlang.org/): a programming language used to build **massively scalable soft real-time systems** with requirements on **high availability**. Some of its uses are in **telecoms**, **banking**, **e-commerce**, **computer telephony** and **instant messaging**. Erlang's runtime system has built-in support for **concurrency**, **distribution** and **fault tolerance**.
+* [Erlang](https://www.erlang.org/): a programming language used to build **massively scalable soft real-time systems** with requirements on **high availability**. Some of its uses are in **telecoms**, **banking**, **e-commerce**, **computer telephony** and **instant messaging**. Erlang's runtime system has built-in support for **concurrency**, **distribution** and **fault tolerance**.
 
-[Elixir](https://elixir-lang.org/): a dynamic, **functional language** designed for building **scalable and maintainable** applications. **Elixir** leverages the **Erlang VM**, known for running low-latency, distributed and fault-tolerant systems, while also being successfully used in web development and the embedded software domain.
+* [Elixir](https://elixir-lang.org/): a dynamic, **functional language** designed for building **scalable and maintainable** applications. **Elixir** leverages the **Erlang VM**, known for running low-latency, distributed and fault-tolerant systems, while also being successfully used in web development and the embedded software domain.
 
-[Phoenix Framework](https://phoenixframework.org/): a productive web framework that **does not compromise speed and maintainability**.
+* [Phoenix Framework](https://phoenixframework.org/): a productive web framework that **does not compromise speed and maintainability**.
 
-[Node.js](https://nodejs.org/): asynchronous event driven **JavaScript** runtime, designed to build **scalable network applications**.
+* [Node.js](https://nodejs.org/): asynchronous event driven **JavaScript** runtime, designed to build **scalable network applications**.
 
-[PostgreSQL](https://www.postgresql.org/): a **powerful**, open source **object-relational database system** with over 30 years of active development that has earned it a strong reputation for **reliability**, **feature robustness**, and **performance**.
+* [PostgreSQL](https://www.postgresql.org/): a **powerful**, open source **object-relational database system** with over 30 years of active development that has earned it a strong reputation for **reliability**, **feature robustness**, and **performance**.
+
+There're three main ways to install all this stuff: **by instaling all natively**, using a **version manager** to install it in our machine, or creating an isolated **Docker container** with all the dependencies.
 
 ### Natively
 
