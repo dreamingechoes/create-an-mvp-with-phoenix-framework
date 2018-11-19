@@ -65,21 +65,24 @@ There're three main ways to install all this stuff: **by instaling all natively*
 
 ### Natively
 
-Erlang: erlang.org/doc/installation_guide/INSTALL.html
+The first way to have all these dependencies ready is by installing directly in your machine natively. Here you have all the documentation resources so you can check the instructions for your operative system:
 
-Elixir: elixir-lang.org/install.html
+* **Erlang**: erlang.org/doc/installation_guide/INSTALL.html
 
-Phoenix Framework: hexdocs.pm/phoenix/installation.html
+* **Elixir**: elixir-lang.org/install.html
 
-Node.js: nodejs.org/en/download/package-manager
+* **Phoenix Framework**: hexdocs.pm/phoenix/installation.html
 
-PostgreSQL: postgresql.org/docs/current/static/tutorial-install.html
+* **Node.js**: nodejs.org/en/download/package-manager
+
+* **PostgreSQL**: postgresql.org/docs/current/static/tutorial-install.html
 
 ### Version Manager
 
-asdf: Extendable version manager with support for Ruby, Node.js, Elixir Erlang & more.
+If you need to deal with multiple versions of these dependencies, the best option is to install them with a **version manager**. If you are into [Ruby on Rails](https://rubyonrails.org/), probably you have used [rvm](https://rvm.io/) or [rbenv](https://github.com/rbenv/rbenv). In this case, we need a version manager capable to handle not only one technology but multiple ones. Here it's when [asdf](https://github.com/asdf-vm/asdf) comes to help us.
 
-github.com/asdf-vm/asdf
+[asdf](https://github.com/asdf-vm/asdf) is an extendable version manager with support for Ruby, Node.js, Elixir Erlang & more. The setup's quite easy, just follow the steps [specified in his setup process](https://github.com/asdf-vm/asdf#setup).
+
 
 ### Docker
 
