@@ -63,7 +63,7 @@ There're three main ways to install all this stuff: **by instaling all natively*
 
 The first way to have all these dependencies ready is by installing directly in your machine natively. Here you have all the documentation resources so you can check the instructions for your operative system:
 
-* **Erlang**: [installation guide](ehttps://rlang.org/doc/installation_guide/INSTALL.html).
+* **Erlang**: [installation guide](https://rlang.org/doc/installation_guide/INSTALL.html).
 * **Elixir**: [installation guide](https://elixir-lang.org/install.html).
 * **Phoenix Framework**: [installation guide](https://hexdocs.pm/phoenix/installation.html).
 * **Node.js**: [installation guide](https://nodejs.org/en/download/package-manager).
