@@ -6,7 +6,7 @@
 
 This repository is the base for a workshop about how to create an [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) with [Elixir](https://elixir-lang.org/) and [Phoenix Framework](https://phoenixframework.org/). In this workshop, we're going to tackle the development of a product idea, setting our development environment, seeing the structure of a regular [Phoenix](https://phoenixframework.org/) application, modeling the business logic, building the web and shipping the final result to production.
 
-So... let's go!!!
+You can check the slides for this workshop [here](./files/slides/Create.an.mvp.with.phoenix.framework.pdf).
 
 ## Contents
 
@@ -62,13 +62,13 @@ It's the **best option** for setup all natively.
 
 ### Docker
 
-We can **recreate the setup of our servers** to have a development environment in the **same conditions as the production one**. The key files to achieve this are `Dockerfile` and `docker-compose.yml`. First you have to install **Docker** first (following the instructions provided [here](docs.docker.com/install)), so you can start to config your project.
+We can **recreate the setup of our servers** to have a development environment in the **same conditions as the production one**. The key files to achieve this are `Dockerfile` and `docker-compose.yml`. First you have to install **Docker** first (following the instructions provided [here](https://docs.docker.com/install)), so you can start to config your project.
 
 You can check the [official documentation](https://docs.docker.com/) in order to see in detail how **Docker** works, but you can check some examples files to dockerize a [Phoenix](https://phoenixframework.org/) application I made some time ago [here](https://github.com/dreamingechoes/docker-elixir-phoenix).
 
 ## Final Product
 
-You can check the final result for our **MVP** [here](/nevernote).
+You can check the final result for our **MVP** [here](./nevernote).
 
 ----------------------------
 
